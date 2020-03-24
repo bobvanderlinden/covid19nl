@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron:  '0 3 * * *'
+
 
 jobs:
   build:
@@ -15,6 +18,3 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages 
-on:
-  schedule:
-    - cron:  '0 3 * * *'
