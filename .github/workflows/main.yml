@@ -15,3 +15,6 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages 
+on:
+  schedule:
+    - cron:  '0 3 * * *'
